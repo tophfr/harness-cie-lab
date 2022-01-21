@@ -24,6 +24,20 @@ pipeline:
                                           imagePath: nikpap/payment-service
                                           tag: tophfr-latest
                                       type: DockerRegistry
+                              manifests:
+                                  - manifest:
+                                        identifier: myman
+                                        type: Values
+                                        spec:
+                                            store:
+                                                type: Github
+                                                spec:
+                                                    connectorRef: xxx
+                                                    gitFetchType: Branch
+                                                    paths:
+                                                        - /harness-deploy/values.yaml
+                                                    repoName: harness-cie-lab
+                                                    branch: main
                   infrastructure:
                       environmentRef: myenv
                       infrastructureDefinition:
