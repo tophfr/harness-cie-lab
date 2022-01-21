@@ -26,8 +26,8 @@ pipeline:
                                       type: DockerRegistry
                               manifests:
                                   - manifest:
-                                        identifier: myman
-                                        type: Values
+                                        identifier: myman2
+                                        type: K8sManifest
                                         spec:
                                             store:
                                                 type: Github
@@ -35,9 +35,10 @@ pipeline:
                                                     connectorRef: xxx
                                                     gitFetchType: Branch
                                                     paths:
-                                                        - /harness-deploy/values.yaml
-                                                    repoName: harness-cie-lab
+                                                        - /harness-deploy/payment-service-dev
+                                                    repoName: payment-service-dev
                                                     branch: main
+                                            skipResourceVersioning: false
                   infrastructure:
                       environmentRef: myenv
                       infrastructureDefinition:
