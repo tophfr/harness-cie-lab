@@ -35,8 +35,8 @@ pipeline:
                                                     connectorRef: xxx
                                                     gitFetchType: Branch
                                                     paths:
-                                                        - /harness-deploy/payment-service-dev
-                                                    repoName: payment-service-dev
+                                                        - /harness-deploy/
+                                                    repoName: harness-cie-lab
                                                     branch: main
                                             skipResourceVersioning: false
                   infrastructure:
